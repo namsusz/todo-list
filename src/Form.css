@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+}
+
+.form input {
+  flex: 1;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #3bc9db;
+}
+
+.create__btn {
+  background-color: #22b8cf;
+  padding: 6px;
+  border-radius: 3px;
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 100;
+  color: white;
+  cursor: pointer;
+}
+
+.create__btn:hover {
+  background: #3bc9db;
+}
