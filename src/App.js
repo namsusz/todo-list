@@ -12,59 +12,59 @@ class App extends React.Component {
     input: "",
     todos: [
       { id: 0, text: "TO DO 리스트 만들기", checked: false },
-      { id: 1, text: "새로고침 하지말아주세용 ˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ", checked: true }
-      { id: 2, text: "데이터가 다 날라갑니당 😭", checked: true }
+      { id: 1, text: "새로고침 하지말아주세용 ˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ", checked: true },
+      { id: 2, text: "데이터가 다 날라갑니당 😭", checked: true },
     ],
-    color: "#343a40"
+    color: "#343a40",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      input: e.target.value
+      input: e.target.value,
     });
   };
 
-  handleCreate = e => {
+  handleCreate = (e) => {
     const { input, todos, color } = this.state;
     this.setState({
       input: "",
       todos: todos.concat({
         id: this.id++,
         text: input,
-        checked: false
+        checked: false,
       }),
-      color: color
+      color: color,
     });
   };
 
-  handleKeyPress = e => {
+  handleKeyPress = (e) => {
     if (e.key === "Enter") {
       this.handleCreate();
     }
   };
 
-  handleToggle = id => {
+  handleToggle = (id) => {
     const { todos } = this.state;
-    const index = todos.findIndex(todo => todo.id === id);
+    const index = todos.findIndex((todo) => todo.id === id);
     const selected = todos[index];
     const nextTodos = [...todos];
 
     nextTodos[index] = {
       ...selected,
-      checked: !selected.checked
+      checked: !selected.checked,
     };
 
     this.setState({ todos: nextTodos });
   };
 
-  handleRemove = id => {
+  handleRemove = (id) => {
     const { todos } = this.state;
     this.setState({
-      todos: todos.filter(todo => todo.id !== id)
+      todos: todos.filter((todo) => todo.id !== id),
     });
   };
 
-  handleColor = color => {
+  handleColor = (color) => {
     this.setState({ color });
   };
 
@@ -76,7 +76,7 @@ class App extends React.Component {
       handleKeyPress,
       handleToggle,
       handleRemove,
-      handleColor
+      handleColor,
     } = this;
 
     return (
