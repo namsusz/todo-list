@@ -7,12 +7,13 @@ import Palette from "./Palette";
 const colors = ["#343a40", "#f03e3e", "#12b886", "#228ae6"];
 
 class App extends React.Component {
-  id = 2;
+  id = 3;
   state = {
     input: "",
     todos: [
       { id: 0, text: "TO DO 리스트 만들기", checked: false },
-      { id: 1, text: "새로고침 하면 추가한게 날라가요 ˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ", checked: true }
+      { id: 1, text: "새로고침 하지말아주세용 ˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ", checked: true }
+      { id: 2, text: "데이터가 다 날라갑니당 😭", checked: true }
     ],
     color: "#343a40"
   };
